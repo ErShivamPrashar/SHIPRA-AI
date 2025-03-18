@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: coral;
+}
+
+.body{
+ display: flex;
+ justify-content: center;
+
+ margin-top: 50px;
+}
+
+.image{
+    border-radius: 20px;
+    margin-left: 1px;
+    height: 230px;
+    width: 350px;
+    background-image: url("https://thumbs.dreamstime.com/z/white-robot-blue-lights-black-body-suit-generative-ai-white-robot-blue-lights-black-body-suit-generative-ai-ai-307150008.jpg");
+    background-size: cover;
+}
+
+#btn{
+  display: block;
+background-color: rgb(200, 246, 108);
+border: 3px solid blueviolet;
+padding: 5px;
+border-radius: 10px;
+margin: 35px;
+color: rgb(94, 7, 74);
+font-size: 15px;
+font-weight: bolder;
+}
+
+#btn1{
+  display: block;
+background-color: rgb(209, 201, 209);
+border: 3px solid blueviolet;
+padding: 5px;
+border-radius: 10px;
+margin: 35px;
+color: rgb(94, 7, 74);
+font-size: 15px;
+font-weight: bolder;
+
+}
+
+h2{
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+}

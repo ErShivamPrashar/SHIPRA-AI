@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>virtual assistent</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+  <h2>SHIPRA AI <br>(shivam prashar)</h2>
+ <div class="body">
+
+    <div class="main">
+        <div class="image"></div>
+        <button id="btn">🗣️ try to speak </button>
+       <button id="btn1">🔎 You speak : </button>
+    </div>
+   
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+  let btn = document.getElementById('btn');
+  let btn1 = document.getElementById('btn1');
+console.log(btn)
+
+function speak(text){
+    let textspeech = new SpeechSynthesisUtterance(text);
+    textspeech.rate = 1;
+    textspeech.pitch = 1;
+    textspeech.volume = 1;
+    textspeech.lang = "hi-GB";
+    window.speechSynthesis.speak(textspeech);
+}
+
+let speechrecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+let recognition = new speechrecognition()
+
+recognition.onresult=(event)=>{
+
+
+    let curindex= event.resultIndex;
+    let transcript = event.results[curindex][0].transcript;
+   console.log(event)
+    
+    takemsg(transcript)
+ 
+    btn1.innerHTML = "🔎 You speak : "+transcript
+}
+
+btn.addEventListener("click", ()=>{
+    recognition.start()
+  
+})
+
+function takemsg(msg){
+
+if(msg.includes("hello")){
+        speak("yes sir,what can i help you?")
+      
+}
+
+else if(msg.includes("who are you")){
+    speak("i am virtual assistant created by shivam Parashar")
+
+}
+
+else if(msg.includes("Hindi mein bol")){
+    speak("ok,  aapki kya help karu?")
+
+}
+
+else if(msg.includes("open YouTube" )){
+    speak("youtube open ho raha hai")
+    window.open("https://youtube.com")
+}
+
+
+else if(msg.includes("YouTube kholo")){
+    speak("youtube open ho raha hai")
+    window.open("https://youtube.com")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+    </script>
+</body>
+</html>
