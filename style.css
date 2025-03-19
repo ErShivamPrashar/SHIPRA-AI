@@ -21,17 +21,7 @@
     background-size: cover;
 }
 
-#btn{
-  display: block;
-background-color: rgb(200, 246, 108);
-border: 3px solid blueviolet;
-padding: 5px;
-border-radius: 10px;
-margin: 35px;
-color: rgb(94, 7, 74);
-font-size: 15px;
-font-weight: bolder;
-}
+
 
 #btn1{
   display: block;
@@ -50,4 +40,51 @@ h2{
   text-align: center;
   margin-top: 20px;
   text-decoration: underline;
+}
+
+input{
+  width: 250px;
+  height: 40px;
+  border: 3px solid blue;
+  margin-left: 5px;
+  font-weight: 600;
+  color: rgb(247, 250, 234);
+  background: rgb(71, 78, 167);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-top: 30px;
+}
+
+input::placeholder{
+  color: aliceblue;
+}
+
+#btn3 {
+  cursor: pointer;
+  padding: 11px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(251, 12, 231);
+  margin-left: -10px;
+  border: 3px solid blue;
+}
+
+
+#btn4 {
+  cursor: pointer;
+  padding: 11px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(169, 183, 16);
+  margin-left: -10px;
+  border: 3px solid blue;
+}
+
+#history{
+  font-weight: bold;
+  color: rgb(49, 43, 77);
+  margin-left: 10px;
+  padding: 5px;
+  width: 310px;
+  border-radius: 10px;
 }

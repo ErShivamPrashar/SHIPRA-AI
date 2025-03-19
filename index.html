@@ -11,15 +11,18 @@
 
     <div class="main">
         <div class="image"></div>
-        <button id="btn">🗣️ try to speak </button>
+       
+        <input type="text" placeholder="🗣️ ask any question from SHIPRA AI" id="ask">
+        <button id="btn3">🔎</button>
+        <button id="btn4">🗣️</button>
+            
        <button id="btn1">🔎 You speak : </button>
     </div>
-   
 
 
  </div>
 
-
+ <p id="history"></p>
 
 
 
@@ -41,9 +44,13 @@
 
 
     <script>
-  let btn = document.getElementById('btn');
+  let btn = document.getElementById('btn4');
+  let btn3 = document.getElementById('btn3');
   let btn1 = document.getElementById('btn1');
-console.log(btn)
+  let ask = document.getElementById('ask');
+  let history = document.getElementById('history');
+
+console.log(ask)
 
 function speak(text){
     let textspeech = new SpeechSynthesisUtterance(text);
@@ -74,6 +81,10 @@ btn.addEventListener("click", ()=>{
     recognition.start()
   
 })
+btn3.addEventListener('click', ()=>{
+
+takemsg(ask.value);
+})
 
 function takemsg(msg){
 
@@ -102,6 +113,60 @@ else if(msg.includes("YouTube kholo")){
     speak("youtube open ho raha hai")
     window.open("https://youtube.com")
 }
+
+
+else if(msg.includes("Chrome kholo")){
+    speak("chrome open ho raha hai")
+    window.open("https://google.com")
+}
+
+else if(msg.includes("open calculator")){
+    speak("calculator open ho raha hai")
+    window.open("calculator://")
+}
+
+else if(msg.includes("open WhatsApp")){
+    speak("whatsapp open ho raha hai")
+    window.open("whatsapp://")
+}
+
+else if(msg.includes("how are you")){
+    speak(" i am fine and who are you ?")
+    
+}
+
+else if(msg.includes("main theek hu")){
+    speak("okay kya help karu")
+    
+}
+
+
+else if(msg.includes("tum kya kya kar sakti ho")){
+    speak(" aap aadesh to do  ")
+    
+}
+
+
+else if(msg.includes("baat karke Achcha Laga")){
+    speak(" thanks")
+    
+}
+
+else if(msg.includes("list bhejo")){
+    speak(" ye dekho main itna hi ke liye pura hu")
+
+    history.innerHTML = "  1. who are you ? <br/> 2. hindi me bol sakti ho ? <br/> 3. shipra open youtube <br/> 4. open chrome"
+    
+}
+
+else{
+    speak("sorry mai abhi pura nahi hu hampe work chal raha hai")
+}
+
+
+
+
+
 
 
 
